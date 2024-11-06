@@ -25,6 +25,17 @@ public class Application {
             if (purchaseItems == null) {
                 continue;
             }
+
+            System.out.println("멤버십 할인을 받으시겠습니까? (Y/N)");
+            String membershipInput;
+            while (true) {
+                membershipInput = scanner.nextLine();
+                if (membershipInput.equalsIgnoreCase("Y") || membershipInput.equalsIgnoreCase("N")) {
+                    break;
+                }
+                System.out.println("[ERROR] 잘못된 입력입니다. 다시 입력해 주세요.");
+                System.out.println("멤버십 할인을 받으시겠습니까? (Y/N)");
+            }
         }
     }
 }
